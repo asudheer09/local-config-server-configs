@@ -1,0 +1,75 @@
+# ===================================================================
+# Spring Boot configuration for the "dev" profile.
+#
+# This configuration overrides the application.yml file.
+#
+# More information on profiles: https://www.jhipster.tech/profiles/
+# More information on configuration properties: https://www.jhipster.tech/common-application-properties/
+# ===================================================================
+spring:
+   jmx: false
+  #cloud:
+    #stream:
+      #default:
+        #consumer:
+          #concurrency: 3
+      #rabbit:
+        #bindings:
+          #megabeaconChannel:
+            #consumer:
+              #maxConcurrency: 5
+              #prefetch: 3
+      #bindings:
+        #megabeaconChannel:
+          #binder: megabeaconBinder
+         # group: megabeacon.wfevents.solrfeed.test
+          #destination: arccl.wfevents.solr
+      #binders:
+        #megabeaconBinder:
+          #environment:
+            #spring:
+              #rabbitmq:
+                #host: localhost
+                #port: 5672
+                #username: guest
+                #password: guest
+
+# ===================================================================
+# Standard Spring Boot properties.
+# Full reference is available at:
+# http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+# ===================================================================
+# ===================================================================
+# Application specific properties
+# Add your own application properties here, see the ApplicationProperties class
+# to have type-safe configuration, like in the JHipsterProperties above
+#
+# More documentation is available at:
+# https://www.jhipster.tech/common-application-properties/
+# ===================================================================
+#property name changes to be done
+application:
+  mail:
+    solrRecipients: sudheer@test.com
+    restRecipients: sudheer@test.com
+    sender: sudheer@test.com
+    subject: 'SOLR Alert, Site : CMT Process - LOCAL - '
+  solr:
+    host: http://localhost:8983/solr
+    #username: searchadmin
+    #password: newuser313
+  contentRefresh:
+    delay: 0 0/1 * * * ?
+    schedulerOn: true
+    #batchSize: 1000
+    #query: timestamp:[2017-05-19T00:08:00.006Z TO 2017-05-19T23:08:00.006Z]&nocache=%d
+#management:
+   #security:
+      #enabled: false
+      
+#endpoints:
+   #actuator:
+      #enabled: true
+   #health:
+      #defaults: 
+         #enabled: false
