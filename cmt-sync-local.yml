@@ -50,9 +50,9 @@ spring:
 #property name changes to be done
 application:
   mail:
-    solrRecipients: sudheer@test.com
-    restRecipients: sudheer@test.com
-    sender: sudheer@test.com
+    solrRecipients: sudheer.akurathi@viacomcontractor.com
+    restRecipients: sudheer.akurathi@viacomcontractor.com
+    sender: sudheer.akurathi@viacomcontractor.com
     subject: 'SOLR Alert, Site : CMT Process - LOCAL - '
   solr:
     host: http://localhost:8983/solr
