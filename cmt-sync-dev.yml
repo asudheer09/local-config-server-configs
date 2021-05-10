@@ -53,7 +53,7 @@ application:
     solrRecipients: sudheer@test.com
     restRecipients: sudheer@test.com
     sender: sudheer@test.com
-    subject: 'SOLR Alert, Site : CMT Process - TEST - '
+    subject: 'SOLR Alert, Site : CMT Process - GIT - '
   solr:
     host: http://localhost:8983/solr
     #username: searchadmin
