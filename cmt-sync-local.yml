@@ -60,7 +60,9 @@ application:
     #password: newuser313
   contentRefresh:
     delay: 0 0/1 * * * ?
-    schedulerOn: true
+    schedulerOn: true,
+    startDateTime:   2021-04-23T14:50:00.033Z,
+    endDateTime:   2021-04-25T14:50:00.033Z,
     #batchSize: 1000
     #query: timestamp:[2017-05-19T00:08:00.006Z TO 2017-05-19T23:08:00.006Z]&nocache=%d
 #management:
