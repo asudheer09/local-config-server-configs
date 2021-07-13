@@ -53,7 +53,7 @@ application:
     solrRecipients: sudheer.akurathi@viacomcontractor.com
     restRecipients: sudheer.akurathi@viacomcontractor.com
     sender: sudheer.akurathi@viacomcontractor.com
-    subject: 'SOLR Alert, Site : CMT Process - really LOCAL - Hello World'
+    subject: 'SOLR Alert, Site : CMT Process - LOCAL -'
   solr:
     host: http://localhost:8983/solr
     #username: searchadmin
