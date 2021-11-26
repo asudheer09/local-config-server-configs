@@ -1,77 +1,43 @@
 # ===================================================================
-# Spring Boot configuration for the "dev" profile.
+# Spring Boot configuration for the "local" profile.
 #
 # This configuration overrides the application.yml file.
 #
 # More information on profiles: https://www.jhipster.tech/profiles/
 # More information on configuration properties: https://www.jhipster.tech/common-application-properties/
-# ===================================================================
-spring:
-   jmx: false
-  #cloud:
-    #stream:
-      #default:
-        #consumer:
-          #concurrency: 3
-      #rabbit:
-        #bindings:
-          #megabeaconChannel:
-            #consumer:
-              #maxConcurrency: 5
-              #prefetch: 3
-      #bindings:
-        #megabeaconChannel:
-          #binder: megabeaconBinder
-         # group: megabeacon.wfevents.solrfeed.test
-          #destination: arccl.wfevents.solr
-      #binders:
-        #megabeaconBinder:
-          #environment:
-            #spring:
-              #rabbitmq:
-                #host: localhost
-                #port: 5672
-                #username: guest
-                #password: guest
-
-# ===================================================================
 # Standard Spring Boot properties.
 # Full reference is available at:
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
-# ===================================================================
-# Application specific properties
-# Add your own application properties here, see the ApplicationProperties class
-# to have type-safe configuration, like in the JHipsterProperties above
-#
-# More documentation is available at:
-# https://www.jhipster.tech/common-application-properties/
-# ===================================================================
+spring:
+   jmx: false
 #property name changes to be done
 application:
   mail:
     solrRecipients: sudheer.akurathi@viacomcontractor.com
     restRecipients: sudheer.akurathi@viacomcontractor.com
     sender: sudheer.akurathi@viacomcontractor.com
-    subject: 'SOLR Alert, Site : CMT Process - LOCAL -'
+    subject: 'SOLR Alert, Site : CMT Process - LOCAL - '
   solr:
     host: http://localhost:8983/solr
     #username: searchadmin
     #password: newuser313
   contentRefresh:
-    delay: 0 0/1 * * * ?
-    schedulerOn: true
-    startDateTime:   2021-04-23T14:50:00.033Z
-    endDateTime:   2021-04-25T14:50:00.033Z
-    #batchSize: 1000
-    #query: timestamp:[2017-05-19T00:08:00.006Z TO 2017-05-19T23:08:00.006Z]&nocache=%d
-#management:
-   #security:
-      #enabled: false
-      
-#endpoints:
-   #actuator:
-      #enabled: true
-   #health:
-      #defaults: 
-         #enabled: false
+    mailDelay: 5
+    dateRangeSchedularOn: false
+    userInputDateTime: 2021-11-22T14:56:00.033Z
+    startDateTime: 2021-01-24T23:59:00.917Z
+    endDateTime: 2021-01-25T00:05:00.970Z
+    jobRun: true
+management:
+   security:
+      enabled: false
+endpoints:
+   actuator:
+      enabled: true
+   health:
+      defaults: 
+         enabled: true
+logging:
+  file:
+    name: cmt-sync-23-11-2021.log
